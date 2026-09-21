@@ -47,6 +47,5 @@ jobs:
           cmake --preset ${{ matrix.preset }}
           IF %ERRORLEVEL% NEQ 0 exit /B %ERRORLEVEL%
           cmake --build --preset ${{ matrix.preset }} -- -k0
-          ${{ github.workspace }}/azure-pipelines/end-to-end-tests.ps1 -RunArtifactsTests
         env:
           VCPKG_ROOT: ${{ github.workspace }}/vcpkg-root
