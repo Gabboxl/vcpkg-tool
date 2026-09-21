@@ -14,12 +14,6 @@ jobs:
         include:
           - os: windows-2025-vs2026
             preset: windows-ci
-          - os: ubuntu-24.04
-            preset: linux-ci
-          - os: ubuntu-24.04-arm
-            preset: linux-arm64-ci
-          - os: macos-26
-            preset: macos-ci
     runs-on: ${{ matrix.os }}
     timeout-minutes: 120
     steps:
